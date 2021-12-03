@@ -1,0 +1,250 @@
+
+
+/*Font Family*/
+
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    /* colors */
+
+    /*theme 1*/
+    --bg1: hsl(222, 26%, 31%);
+    --keypad1: hsl(223, 31%, 20%);
+    --screen1: hsl(224, 36%, 15%);
+    --del-rest1: hsl(225, 21%, 49%);
+    --del-shadow1: hsl(224, 28%, 35%);
+    --igual-red: hsl(6, 63%, 50%);
+    --red-shadow: hsl(6, 70%, 34%);
+    --keys-bg1: hsl(30, 25%, 89%);
+    --white-txt: hsl(0, 0, 100%);
+    --grayish-orange-keybg1: hsl(30, 25%, 89%);
+    --keyshadow1: hsl(28, 16%, 65%);
+    --dark-txt1: hsl(221, 14%, 31%);
+
+     /*theme 2*/
+    --bg2: hsl(0, 0%, 90%);
+    --keypad-toggle2: hsl(0, 5%, 81%);
+    --screen2: hsl(0, 0%, 93%);
+    --del-rest2: hsl(185, 42%, 37%);
+    --del-shadow2: hsl(185, 58%, 25%);
+   --igual2: hsl(25, 98%, 40%);
+   --igual-shadow2: hsl(25, 99%, 27%);
+   --keys-bg2: hsl(45, 7%, 89%);
+   --keys-shadow2: hsl(35, 11%, 61%);
+   --dark-txt2: hsl(60, 10%, 19%);
+
+    /*theme 3*/
+   
+   --bg3: hsl(268, 75%, 9%);
+   --toggle-keypad3: hsl(268, 71%, 12%);
+   --del-rest3: hsl(281, 89%, 26%);
+   --del-shadow3: hsl(285, 91%, 52%);
+   --igual3: hsl(176, 100%, 44%);
+   --igual-shadow3: hsl(177, 92%, 70%);
+   --keys-bg3: hsl(268, 47%, 21%);
+   --keys-shadow3: hsl(290, 70%, 36%);
+   --light-yellow-txt: hsl(52, 100%, 62%);
+   --dark-txt3: hsl(198, 20%, 13%);
+   
+    
+    /* font-sizes */
+    --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
+    --fs-800: 3.5rem;
+    --fs-700: 1.5rem;
+    --fs-600: 1rem;
+    --fs-500: 1rem;
+    --fs-400: 0.9375rem;
+    --fs-300: 1rem;
+    --fs-200: 0.875rem;
+    
+    
+}
+
+
+body {
+    box-sizing: border-box;
+    font-family: "Spartan";
+    font-size: var(--fs-400);
+    line-height: 1.5;
+    min-height: 100vh;
+    display: grid;
+    background-color: hsl(30, 25%, 89%);
+}
+
+
+@media (min-width: 35em) {
+    :root {
+        --fs-800: 5rem;
+        --fs-700: 2.5rem;
+        --fs-600: 1.5rem;
+        --fs-500: 1.25rem;
+        --fs-400: 1rem;
+    }
+}
+
+@media (min-width: 45em) {
+    :root {
+        /* font-sizes */
+        --fs-800: 6.25rem;
+        --fs-700: 3.5rem;
+        --fs-600: 2rem;
+        --fs-500: 1.75rem;
+        --fs-400: 1.125rem;
+    }
+}
+
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+
+/* https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+    margin: 0; 
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight: 400;
+}
+
+img,
+picutre {
+    max-width: 100%;
+    display: block;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* ------------------- */
+/* Utility classes     */
+/* ------------------- */
+
+/* general */
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+.grid {
+    display: grid;
+    gap: var(--gap, 1rem);
+}
+
+.d-block {
+    display: block;
+}
+
+/* colors */
+
+/*Theme 1*/
+
+ .bg1 {background-color: var(--bg1);}
+ .keypad1 {background-color: var(--keypad1);}
+ .screen1 {background-color: var(--screen1);}
+ .del-rest1 {background-color: var(--del-rest1);}
+ .del-shadow1 {background-color: var(--del-shadow1);}
+ .igual1 {background-color: var(--igual-red);}
+ .igual-shadow1 {background-color: var(--red-shadow);}
+ .keys1 {background-color: var(--keys-bg1);}
+ .keys1shadow {background-color: var(--keyshadow1);}
+
+ .white-txt {color: var(--white-txt);}
+ .dark-txt1 {color: var(--dark-txt1);}
+
+/*Theme 2*/
+
+
+.bg2 {background-color: var(--bg2);}
+.keypad2 {background-color: var(--keypad-toggle2);}
+.screen2 {background-color: var(--screen2);}
+.del-rest2 {background-color: var(--del-rest2);}
+.del-shadow2 {background-color: var(--del-shadow2);}
+.igual2 {background-color: var(--igual2);}
+.igual-shadow2 {background-color: var(--igual-shadow2);}
+.keys2 {background-color: var(--keys-bg2);}
+.keys2shadow {background-color: var(--keys-shadow2);}
+.dark-txt2 {color: var(--dark-txt2);}
+
+ /*theme 3*/
+
+
+.bg3 {background-color: var(--bg3);}
+.keypad3 {background-color: var(--toggle-keypad3);}
+.del-rest3 {background-color: var(--del-rest3);}
+.del-shadow3 {background-color: var(--del-rest3);}
+.igual3 {background-color: var(--igual3);}
+.igual-shadow3 {background-color: var(--igual-shadow3);}
+.keys3 {background-color: var(--keys-bg3);}
+.keys3shadow {background-color: var(--keys-shadow3);}
+.dark-txt3 {color: var(--dark-txt3);}
+
+
+
+.uppercase { text-transform: uppercase; }
+
+
+.fs-700 { font-size: var(--fs-700); }
+.fs-600 { font-size: var(--fs-600); }
+.fs-500 { font-size: var(--fs-500); }
+.fs-400 { font-size: var(--fs-400); }
+.fs-300 { font-size: var(--fs-300); }
+.fs-200 { font-size: var(--fs-200); }
+
+
+.fs-700{
+    line-height: 1.1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
