@@ -8,9 +8,104 @@
   <link rel="stylesheet" type="text/css" href="styles.css">
   <title>Frontend Mentor | Calculator app</title>
 </head>
-<body>
+<body class="bg1">
 
-  <h1>Calc</h1>
+  <!--The main container for the entire app-->
+<main class="main flex" style="flex-direction: column;">
+
+<!--The header-->  
+
+<section class="header flex" style="justify-content: space-between;">
+
+  <!--The title-->
+
+  <h1 class="fs-600">Calc</h1>
+
+  <!--The thems container | it's two parts, first the nums than the themes switcher-->
+
+  <div class="themes">
+
+
+ <div class="themes-nums grid">
+  <span>1</span>
+  <span>2</span>
+  <span>3</span>
+ </div>
+
+ <div class="thems-switch flex">
+   <Span class="uppercase" style="letter-spacing: 1px; font-weight: lighter; font-size: 100;">Theme</Span>
+   <div class="switch flex" style="justify-content: space-around;">
+   
+   
+    <div class="cirlce"></div>
+
+
+    <div class="check1">
+      <input type="checkbox" id="theme1">
+      <label for="theme1" class="theme1">
+    </div>
+
+     <div class="check2">
+      <input type="checkbox" id="theme2">
+      <label for="theme2" class="theme2">
+     </div>
+
+      <div class="check3">
+        <input type="checkbox" id="theme3">
+          <label for="theme3" class="theme3">
+      </div>
+   
+   </div>
+ </div>
+  </div>
+
+</section>
+
+<!--The Screen that shows the result-->
+
+
+<section class="screen screen1">
+  
+</section>
+
+
+<section class="cal-container grid keypad1 ">
+  
+ <div class="cal grid">
+  <div class="key">7</div>
+  <div class="key">8</div>
+  <div class="key">9</div>
+  <div class="del">DEL</div>
+ </div>
+
+  <div class="cal grid">
+  <div class="key">4</div>
+  <div class="key">5</div>
+  <div class="key">6</div>
+  <div class="key">+</div>
+  </div class="key">
+
+  <div class="cal grid">
+    <div class="key">1</div>
+    <div class="key">2</div>
+    <div class="key">3</div>
+    <div class="key">-</div>
+    </div class="key">
+
+  <div class="cal grid">
+  <div class="key">.</div>
+  <div class="key">0</div>
+  <div class="key">/</div>
+  <div class="key">x</div>
+  </div> 
+
+  <div class="btn grid rest-igual">
+  <div class="rest">REST</div>
+  <div class="igual">=</div>
+  </div>
+</section>
+
+</main>  
 
   
 <script src="sandbox.js"></script>  
