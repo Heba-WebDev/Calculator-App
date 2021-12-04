@@ -236,6 +236,23 @@ body {
     padding: 2rem;
 }
 
+@media (min-width: 40rem) {
+.main {
+    width: 70%;
+    margin: 0 auto;
+}
+}
+
+@media (min-width: 50rem) {
+    .main {
+        width: 45%;
+        margin: 0 auto;
+    }
+}
+
+ 
+
+
 .themes-nums {
     width: 100%;
     grid-template-columns: repeat(3, 0.1fr);
@@ -253,7 +270,7 @@ body {
 
 .switch {
     width: 80px;
-    height: 50%;
+    height: 55%;
     background-color: var(--keypad1);
     border-radius: 10px;
     position: relative;
@@ -280,16 +297,6 @@ body {
 }
 
 
-
-/* .switch-ball {
-    position: absolute;
-    top: 10%;
-    left: 0;
-    width: 30%;
-    height: 80%;
-    border-radius: 50%;
-    background-color: var(--igual-red);
-} */
 
 .screen {
     width: 100%;
