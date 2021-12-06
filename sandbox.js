@@ -144,3 +144,206 @@ function switchToThree() {
        
     }
 }
+
+
+// get all the calculator's buttons
+
+let seven = document.querySelector('#seven');
+let eight = document.querySelector('#eight');
+let nine = document.querySelector('#nine');
+let delLastNumber = document.querySelector('#del');
+let four = document.querySelector('#four');
+let five = document.querySelector('#five');
+let six = document.querySelector('#six');
+let plus = document.querySelector('#plus');
+let one = document.querySelector('#one');
+let two = document.querySelector('#two');
+let three = document.querySelector('#three');
+let minus = document.querySelector('#minus');
+let period = document.querySelector('#period');
+let zero = document.querySelector('#zero');
+let divide = document.querySelector('#divide');
+let mulitply = document.querySelector('#mulitply');
+let clear = document.querySelector('#clear');
+let sum = document.querySelector('#sum');
+
+// the calculator's screen
+
+let innerScreen = document.querySelector('.innerScreen');
+
+let cal = document.createTextNode('');
+
+
+
+let sumAll;
+
+//number one 
+
+one.addEventListener('click', addOne);
+
+function addOne() {
+    innerScreen.textContent += '1';
+}
+
+//number two
+
+two.addEventListener('click', addTwo);
+
+function addTwo() {
+    innerScreen.textContent += '2';
+}
+
+
+//number three
+
+three.addEventListener('click', addThree);
+
+function addThree() {
+    innerScreen.textContent += '3';
+}
+
+//number four 
+
+four.addEventListener('click', addFour);
+
+function addFour() {
+    innerScreen.textContent += '4';
+}
+
+//number five
+
+five.addEventListener('click', addFive);
+
+function addFive() {
+    innerScreen.textContent += '5';
+}
+
+//number six
+
+six.addEventListener('click', addSix);
+
+function addSix() {
+    innerScreen.textContent += '6';
+}
+
+//number seven
+
+seven.addEventListener('click', addSeven);
+
+function addSeven() {
+    innerScreen.textContent += '7';
+}
+
+
+//number eight
+
+eight.addEventListener('click', addEight);
+
+function addEight() {
+    innerScreen.textContent += '8';
+}
+
+
+//number nine
+
+nine.addEventListener('click', addNine);
+
+function addNine() {
+    innerScreen.textContent += '9';
+}
+
+
+
+//number zero
+
+zero.addEventListener('click', addZero);
+
+function addZero() {
+    innerScreen.textContent += '0';
+}
+
+
+//delete the last entrie
+
+delLastNumber.addEventListener('click', deleteLastNum)
+
+function deleteLastNum() {
+
+    if(innerScreen.textContent != '') {
+       let newInnerScreen = innerScreen.textContent.slice(0, -1);
+       innerScreen.textContent = newInnerScreen;
+
+    }
+   
+}
+
+//the plus sign
+
+plus.addEventListener('click', addition);
+
+function addition() {
+    innerScreen.textContent += '+';
+};
+
+//the minus sign
+
+minus.addEventListener('click', substraction);
+
+function substraction() {
+    innerScreen.textContent += '-';
+};
+
+
+//the mulitplication sign
+
+mulitply.addEventListener('click', muulti);
+
+function muulti() {
+    innerScreen.textContent += '*';
+};
+
+//the division sign
+
+divide.addEventListener('click', divideTheNum);
+
+function divideTheNum() {
+   
+        innerScreen.textContent += '/';
+    
+}
+
+
+//the point
+
+period.addEventListener('click', periodSign);
+
+function periodSign() {
+    innerScreen.textContent += '.';
+}
+
+//the reset button
+
+clear.addEventListener('click', deleteAll);
+
+function deleteAll() {
+    
+    if(innerScreen.textContent !='') {
+        innerScreen.textContent = '';
+    }
+}
+
+//the sumup button
+
+sum.addEventListener('click', sumItUp);
+
+function sumItUp() {
+    if(innerScreen.textContent !='') {
+        let sumup = eval(innerScreen.textContent);
+        innerScreen.textContent = sumup;
+    }
+    
+}
+
+
+
+alert(parseInt('3/3'))
