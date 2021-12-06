@@ -282,7 +282,15 @@ function deleteLastNum() {
 plus.addEventListener('click', addition);
 
 function addition() {
-    innerScreen.textContent += '+';
+    let regex = /[^0-9]$/gi;
+    if(innerScreen.textContent !='' && regex.test(innerScreen.textContent)) {
+        let newInnerScreen = innerScreen.textContent.slice(0, -1);
+       innerScreen.textContent = newInnerScreen;
+       innerScreen.textContent += '+';
+    } else {
+        innerScreen.textContent += '+';
+    }
+  
 };
 
 //the minus sign
@@ -290,7 +298,15 @@ function addition() {
 minus.addEventListener('click', substraction);
 
 function substraction() {
-    innerScreen.textContent += '-';
+    let regex = /[^0-9]$/gi;
+    if(innerScreen.textContent !='' && regex.test(innerScreen.textContent)) {
+        let newInnerScreen = innerScreen.textContent.slice(0, -1);
+       innerScreen.textContent = newInnerScreen;
+       innerScreen.textContent += '-';
+    } else {
+        innerScreen.textContent += '-';
+    }
+
 };
 
 
@@ -299,7 +315,15 @@ function substraction() {
 mulitply.addEventListener('click', muulti);
 
 function muulti() {
-    innerScreen.textContent += '*';
+    let regex = /[^0-9]$/gi;
+    if(innerScreen.textContent !='' && regex.test(innerScreen.textContent)) {
+        let newInnerScreen = innerScreen.textContent.slice(0, -1);
+       innerScreen.textContent = newInnerScreen;
+       innerScreen.textContent += '*';
+    } else {
+        innerScreen.textContent += '*';
+    }
+    
 };
 
 //the division sign
@@ -307,9 +331,15 @@ function muulti() {
 divide.addEventListener('click', divideTheNum);
 
 function divideTheNum() {
-   
-        innerScreen.textContent += '/';
-    
+
+    let regex = /[^0-9]$/gi;
+    if(innerScreen.textContent !='' && regex.test(innerScreen.textContent)) {
+        let newInnerScreen = innerScreen.textContent.slice(0, -1);
+       innerScreen.textContent = newInnerScreen;
+       innerScreen.textContent += '/';
+    } else {
+    innerScreen.textContent += '/';
+    }
 }
 
 
@@ -337,6 +367,13 @@ function deleteAll() {
 sum.addEventListener('click', sumItUp);
 
 function sumItUp() {
+    let regex = /[^0-9]$/gi;
+    if(innerScreen.textContent !='' && regex.test(innerScreen.textContent)) {
+        let newInnerScreen = innerScreen.textContent.slice(0, -1);
+        let sumup = eval(newInnerScreen);
+        innerScreen.textContent = sumup;
+    }
+
     if(innerScreen.textContent !='') {
         let sumup = eval(innerScreen.textContent);
         innerScreen.textContent = sumup;
@@ -346,4 +383,4 @@ function sumItUp() {
 
 
 
-alert(parseInt('3/3'))
+
